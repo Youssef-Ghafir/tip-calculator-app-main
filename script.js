@@ -107,4 +107,5 @@ function Reset() {
     err_select.classList.remove('error')
     custom.classList.remove('error')
     document.querySelectorAll('.box_select > *').forEach(el => el.classList.remove('active'))
+    values_inpt = ['',''];
 }
