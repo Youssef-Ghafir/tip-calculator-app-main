@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="main.css">
+  <title>YG</title>
+</head>
+<body>
+  <div class="container">
+      <section class="sc_1">
+        <div class="box_inp">
+          <h4 class="title">Bill <span class="">Can't Be Zero</span></h4>
+          <div class="inp_bx">
+            <img src="images/icon-dollar.svg" alt="" srcset="">
+            <input type="number" name="" id="bill" value="0">
+          </div>
+        </div>
+       <div class="select_bx">
+        <h4 class="title">  Select Tip %
+        </h4>
+        <ul class="box_select">
+          <li data-value="5">5%</li>
+          <li data-value="10">10%</li>
+          <li data-value="15">15%</li>
+          <li data-value="25">25%</li>
+          <li data-value="50">50%</li>
+          <input type="number" name="" id="custom" placeholder="Custom" value="">
+        </ul>
+        <span id="err-select">Tip Can't Equal to Zero or Upper Than 100</span>
+       </div>
+        <div class="box_inp">
+          <h4 class="title">Number of People  <span class="">Can't Be Zero</span></h4>
+          <div class="inp_bx">
+            <img src="images/icon-person.svg" alt="" srcset="">
+            <input type="number" name="" id="person" value="0">
+          </div>
+        </div>
+      </section>
+      <section class="sec_2">
+        <div class="inf">
+          <div class="box">
+            <h3>  Tip Amount
+              <span>/ person</span>
+            </h3>
+            <h1 id="tip">$0.00</h1>
+          </div>
+          <div class="box">
+            <h3>  Total
+              <span>/ person</span>
+            </h3>
+            <h1 class="total" id="total">$0.00</h1>
+          </div>
+
+        </div>
+        <button onclick="Reset()">Reset</button>
+      </section>
+  </div>
+  <script src="script.js"></script>
+  </body>
+</html>

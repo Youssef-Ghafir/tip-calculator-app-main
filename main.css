@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+:root {
+    --dark_cyan: hsl(183, 100%, 15%);
+    --grayish-cyan:hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan:hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* ============================ */
+body {
+    font-size: 24px;
+    background-color: #C5E4E7;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    width: 850px;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: #fff;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+.container section {
+    width: 45%;
+}
+.container .sc_1 {
+    min-height: 360px;
+}
+.container .sc_1 .title {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--grayish-cyan);
+    margin-bottom: 5px;
+}
+.container .sc_1 .title span {
+    color: #F44336;
+    display: none;
+}
+.container .sc_1 .title span.error {
+    display: block;
+}
+.container .sc_1 .box_inp .inp_bx{
+    position: relative;
+}
+.container .sc_1 .box_inp:first-of-type {
+    margin-bottom: 2rem;
+}
+.container .sc_1 .box_inp:last-of-type{
+    margin-top: 2rem;
+}
+.container .sc_1 .box_inp .inp_bx input.error {
+    border: 3px solid #F44336;
+}
+.container .sc_1 .box_inp .inp_bx input {
+    width: 100%;
+    border: transparent;
+    outline: transparent;
+    border-radius: 10px;
+    background-color: rgb(197 228 231 / 50%);
+    padding: .5rem 1rem;
+    text-align: right;
+    font-size: 1em;
+    color: var(--dark_cyan);
+    font-weight: bold;
+}
+.container .sc_1 .box_inp .inp_bx input:focus {
+    border: 3px solid var(--dark_cyan);
+}
+.container .sc_1 .box_inp .inp_bx img {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+.container .sc_1 .box_select {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,30.333%);
+    gap: 15px;
+    text-align: center;
+}
+.container .sc_1 .box_select li {
+    color: #fff;
+    padding: .3rem;
+    font-weight: 400;
+    transition: .3s ease-in-out;
+    border-radius: 6px;
+    background-color: var(--dark_cyan);
+    cursor: pointer;
+}
+.container .sc_1 .box_select li.active,
+.container .sc_1 .box_select li:hover    {
+    background-color:#22C2AC;
+    color: var(--dark_cyan);
+}
+.container .sc_1 .box_select input {
+    border-radius: 6px;
+    background-color: rgb(197 228 231 / 50%);
+    border: transparent;
+    text-align: center;
+    font-size: 20px;
+    color: var(--dark_cyan);
+    font-weight: bold;
+    outline: transparent;
+}
+.container .sc_1 .box_select input::placeholder {
+    text-align: center;
+    font-size: 20px;
+    color: var(--dark_cyan);
+    font-weight: bold;
+    outline: none;
+}
+.container .sc_1 .box_select input:focus {
+    border: 3px solid var(--dark_cyan);
+}
+.container .sc_1 .box_select input.error {
+    border: 3px solid #F44336;
+}
+.container .sc_1 .select_bx span {
+    color: #F44336;
+    margin:.5rem 0;
+    display: none;
+    font-size: 15px;
+}
+.container .sc_1 .select_bx span.error {
+    display: block;
+}
+.container .sec_2 {
+    background-color: var(--dark_cyan);
+    padding: 1.2rem;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.container .sec_2 .inf {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container .sec_2 .inf .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .sec_2 .inf .box h3 {
+    font-size: .7em;
+    color: #fff;
+    font-weight: normal;
+}
+.container .sec_2 .inf .box h3 > span {
+    display: block;
+    font-size: .6999em;
+    color: var(--grayish-cyan);
+}
+.container .sec_2 .inf .box h1 {
+    color: #22C2AC;
+}
+.container .sec_2 button {
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: #22C2AC;
+    color: var(--dark_cyan);
+    font-weight: bold;
+    font-size: .7em;
+    cursor: pointer;
+    border: transparent;
+    outline: transparent;
+    transition: .3s ease-in-out;
+    text-transform: uppercase;
+}
+.container .sec_2 button:hover {
+    background-color: #9FE8DF;
+}
+@media (max-width:767px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .container section {
+        width: 100%;
+    }
+    .container .sc_1 .box_select {
+        grid-template-columns: repeat(2,50%);
+    }
+    body {
+        padding: 5px;
+    }
+}
